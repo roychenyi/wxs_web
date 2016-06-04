@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <title>图片上传</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/plugins/imgareaselect/imgareaselect-default.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/plugins/ajaxfileupload/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="js/plugins/imgareaselect/jquery.imgareaselect.min.js"></script>
+    <script type="text/javascript" src="js/plugins/imgareaselect/jquery.imgareaselect.pack.js"></script>
+    <script type="text/javascript" src="js/upload.js"></script>
+</head>
+<body>
+<input type="hidden" name="x1" value="0" />
+<input type="hidden" name="y1" value="0" />
+<input type="hidden" name="x2" value="100" />
+<input type="hidden" name="y2" value="100" />
+<input id="fileToUpload" name="fileToUpload" type="file"  onchange="uploadImage();"/>
+<div id="facediv" style="display:none;z-index:100;">
+    <img id="face" />
+</div>
+<button id="extjs">js</button>
+<!--<div class="W_layer " id="layer_14591523983501" stk-mask-key="1459152398350940" style="top: 25px; left: 361.5px;"><div tabindex="0"></div>-->
+    <!--<div class="content" node-type="autoHeight">-->
+        <!--<div node-type="title" class="W_layer_title" style="cursor: move;">头像设置</div>-->
+        <!--<div class="W_layer_close"><a node-type="close" href="javascript:void(0);" class="W_ficon ficon_close S_ficon">X</a></div>-->
+        <!--<div node-type="inner"><div class="layer_edit_avatar"><div class="WB_minitab"><ul class="minitb_ul S_line1 clearfix"><li class="minitb_item current S_line1" node-type="local_tab"> <a class="minitb_lk S_txt1 S_bg2" href="javascript:void(0);" action-type="switchTab" action-data="tab=local">本地上传</a><span class="cur_block"></span></li><li class="minitb_item S_line1" node-type="book_tab"> <a class="minitb_lk S_txt1" action-type="switchTab" action-data="tab=photobook">微博相册</a><span class="cur_block"></span></li></ul></div><div class="edit_avatar clearfix" node-type="local"><div class="edit_left W_fl"><div class="initial_pic"><div class="loading_block" style="display:none;" node-type="local_loading"><i class="W_loading_big"></i></div><div class="choose_pic W_tc" node-type="choose_form"><a class="W_btn_b" href="javascript:void(0);" node-type="file_select" style="position: relative;overflow: hidden;"><em class="W_ficon ficon_add S_ficon">+</em>选择图片<form node-type="low_form1" enctype="multipart/form-data" method="post"><input accept="image/gif, image/jpeg, image/x-png" type="file" action-type="changeFile" node-type="file1" name="pic1" style="position:absolute;bottom:0;right:0;filter:alpha(opacity=0);-moz-opacity:0;cursor:pointer;width:1000px;height:1000px;font-size:100px;"></form></a><p class="S_txt2" style="display:">只支持JPG、PNG、GIF，大小不超过5M</p><p class="tips S_txt2" node-type="err_tip" style="display:none;"><span class="W_icon icon_rederrorS"></span><span node-type="err_msg">上传失败！上传图片宽度不能小于100px</span></p></div><div class="edit_pic" node-type="edit_form" style="display:none;"><div class="img_wrap W_tc"><i></i><span class="canvas_wrap" node-type="container"><span class="canvas" style="top:0;left:0;width:100%;height:100%;"><canvas node-type="drawCanv" width="360" height="360" style="z-index:9999"></canvas></span></span></div></div></div><div class="fun_area clearfix" node-type="tools" style="display:none;"><a class="W_btn_b W_fl" href="javascript:void(0);" action-type="back" action-data="from=local&amp;to=book_detail" style="position: relative;overflow: hidden;">重新上传<form node-type="low_form2" enctype="multipart/form-data" method="post"><input accept="image/gif, image/jpeg, image/x-png" type="file" action-type="changeFile" node-type="file2" name="pic1" style="position:absolute;bottom:0;right:0;filter:alpha(opacity=0);-moz-opacity:0;cursor:pointer;width:1000px;height:1000px;font-size:100px;"></form></a><a class="W_btn_b W_fr" href="javascript:void(0);" action-type="rotate" node-type="btn_rotate"><em class="W_ficon ficon_turnleft">m</em><span>90°旋转</span></a></div></div><div class="edit_right W_fr"><div class="preview W_tc"><p class="tit">预览</p><div class="avatar avatar_100"><p class="pic_wrap"><canvas node-type="big" width="100" height="100" class="W_face_radius"></canvas></p><span class="S_txt2">100px x 100px</span></div><div class="avatar avatar_50"><p class="pic_wrap"><canvas node-type="mid" width="50" height="50" class="W_face_radius"></canvas></p><span class="S_txt2">50px x 50px</span></div><div class="avatar avatar_30"><p class="pic_wrap"><canvas node-type="small" width="30" height="30"></canvas></p><span class="S_txt2">30px x 30px</span></div></div></div></div><div class="albums mod_1" node-type="photobook" style="display:none;"><p class="tit">所有相册</p><div class="loading_block" style="display:none" node-type="book_loading"><i class="W_loading_big"></i></div><div class="albums_list"><div class="list_wrap clearfix" node-type="book_list"></div></div></div><div class="albums mod_2" node-type="book_detail" style="display:none;"><p class="tit"><a href="javascript:void(0);" class="S_txt1" action-type="back" action-data="from=book_detail&amp;to=photobook">所有相册</a> &gt; <span class="S_txt2" node-type="photoName"></span></p><div class="loading_block" style="display:none" node-type="photo_loading"><i class="W_loading_big"></i></div><div class="albums_list scroll mask_layer"><div class="list_wrap clearfix" node-type="photo_list"></div></div></div></div><div class="W_layer_btn S_bg1"><a class="W_btn_a btn_34px" href="javascript:void(0);" node-type="ok" action-type="ok">确定</a><a class="W_btn_b btn_34px" href="javascript:void(0);" node-type="cancel" action-type="cancel">取消</a></div><form node-type="head_form" method="post" style="display:none;"></form></div>-->
+    <!--</div>-->
+<!--</div>-->
+<script>
+$("#extjs").click(function(){
+    $("<script type=\"text/javascript\" src='js/bootstrap.min.js'><\/script>").insertAfter(this);
+    document.write('<scr' + 'ipt type="text/javascript" src="'+otherJS+'"></scr' + 'ipt>');
+});
+</script>
+</body>
+</html>

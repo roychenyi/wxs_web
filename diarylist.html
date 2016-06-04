@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>日志列表</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="row">
+    <div class="ibox">
+        <div class="ibox-title">
+            <!--<div class="navbar-collapse collapse ">-->
+                <!--<ul class="nav navbar-nav no-padding">-->
+                    <!--<li><a>我的文章</a></li>-->
+                    <!--<li><a>私密文章</a></li>-->
+                    <!--<li><a>写文章</a></li>-->
+                <!--</ul>-->
+                <!--<ul class="nav navbar-top-links navbar-right">-->
+                    <!--<li><a>草稿箱</a></li>-->
+                    <!--<li><a>回收站</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            文章
+</div>
+
+         <div class="ibox-content">
+             <div class="row">
+                <div class="col-md-9">
+
+                    <ul class="list-group">
+                        #foreach($diary in $diarys)
+                        <li class="list-group-item"><a href="#rootUrl/$author.nickname/article/details/$diary.diaryId">$diary.title</a>
+                            #if($user.userId==$author.userId)
+                        <span class="pull-right dropdown">&nbsp;
+							<a class="dropdown-toggle active" data-toggle="data-toggle"><i class="fa fa-edit "></i>编辑<span class="fa fa-sort-desc fa-2x" style="padding:0 10px;width: 30px; "></span></a>
+                                        <ul class="dropdown-menu text-left">
+                                            <li><a>编辑</a></li>
+                                            <li><a href="javascript:;" onclick="DComment.deleteComment()">删除</a></li>
+                                            <li><a>转为私密文章</a></li>
+                                        </ul></span>
+                            #end
+                            <div class="pull-right">$date.format('yyyy/MM/dd',$diary.writeTime)&nbsp;($diary.replyCount/$diary.viewCount)</div>
+                        </li>
+                        #end
+                    </ul>
+                    <div class="ibox-title">
+                        <ul class="pagination" id="" >
+                            <li class="previous"><a href="#">&larr; 上一页</a></li>
+                            <li><a href="#" title="上一页">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li class="disabled"><a >……</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#" title="下一页">&raquo;</a></li>
+                            <li class=""><a href="#" title="下一页">下一页&rarr;</a></li>
+                            <li>跳转到<input style="width: 3em" type="text" id="page" value="12"><button onclick="DComment.goPage($('#page').val().trim())">确定</button></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+
+                    <ul class="list-group">
+                        <li class="list-group-item"><h4 class="list-group-item-heading text-info">134</h4></li>
+                        #foreach($catalog in $catalogs)
+                        <li class="list-group-item "><a><span>$catalog.catalogName</span><span class="pull-right">($catalog.articleCount)</span></a></li>
+                        #end
+                    </ul>
+
+                </div>
+             </div>
+            </div>
+
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>          <!--创建手风琴效果的可折叠菜单-->
+<!--   <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>   <!--一个支持把内容放在一个盒子里面，固定一个高度，超出的则使用滚动-->
+
+<!-- Custom and plugin javascript -->
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/article_tool.js"></script>
+<script src="js/comment.js"></script>
+<script>
+
+</script>
+</body>
+</html>

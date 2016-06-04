@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>登陆</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body class="top-navigation " >
+
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+            <!-- 导航栏 -->
+    <header>
+        <div class="row border-bottom white-bg">
+            <nav class="navbar  navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <i class="fa fa-reorder"></i>
+                    </button>
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar1" data-toggle="collapse" class="navbar-toggle collapsed" type="button" id="user">
+                        <i class="fa fa-user"></i>
+                    </button>
+
+                    <button  aria-controls="navbar" aria-expanded="false" data-target="#search" data-toggle="collapse" class="navbar-toggle collapsed" type="button" id="top-search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <a href="index_4.html#" class="navbar-brand">文学社网站</a>
+                </div>
+
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a aria-expanded="false" role="button" href="#"><i class="fa fa-home"></i> 首页</a>
+                        </li>
+                        <li >
+                            <a aria-expanded="false" rele="button" href="#"><i class="fa fa-inbox"></i>社团</a>
+                        </li>
+                        <li>
+                            <a aria-expanded="false" rele="button" href="#"><i class="fa fa-edit"></i>文字</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="nav navbar-top-links navbar-right">
+
+
+                        <li ><a>登陆</a></li>
+                        <li><a>注册</a></li>
+                    </ul>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a aria-expanded="false" role="button" href="index_4.html#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user">用户</i> <span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="index_4.html">菜单列表</a>
+                                </li>
+                                <li><a href="index_4.html">菜单列表</a>
+                                </li>
+                                <li><a href="index_4.html">菜单列表</a>
+                                </li>
+                                <li><a href="index_4.html">菜单列表</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right hidden-xs" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button type="button" class="btn btn-sm btn-primary">搜索</button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+            <!--主体部分，注册-->
+        <div class="middle-box text-center loginscreen   animated fadeInDown">
+            <div>
+                <div>
+
+                    <h1 class="logo-name">文</h1>
+
+                </div>
+                <h3>欢迎注册文学社平台</h3>
+                <p>创建一个新账户</p>
+                <p id="error_text" class="text-danger text-left"><small>两次密码不相同，请重新输入</small></p>
+                <form class="m-t" role="form" action="login.html">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入邮箱进行注册" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nickname" placeholder="请输入用户昵称进行注册" required="">
+                        <p class="text-info text-left"><small>此昵称为用户专属昵称，一旦设置不可轻易改变</small></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="请输入密码" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="请再次输入密码" required="">
+
+                    </div>
+                    <div class="form-group">
+                        <div class="ibox">
+                            <div class="ibox-content" style="height: 100px;text-align: left;overflow-y: auto;">
+                                《 新浪网络服务使用协议》  1. 特别提示 1.1  新浪网技术（中国）有限公司(Sina.com Technology (China) Co., Ltd.)及北京新浪互联信息服务有限公司(Beijing SINA Internet Information Service Co. Ltd.)（以下合称“新浪”）同意按照本协议的规定及其不时发布的操作规则提供基于互联网以及移动网的相关服务（以下称“网络服务”），为获得网络服务，服务使用人（以下称“用户”）应当同意本协议的全部条款并按照页面上的提示完成全部的注册程序。用户在进行注册程序过程中点击“同意”按钮即表示用户完全接受本协议项下的全部条款。 1.2  用户注册成功后，新浪将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。   2. 服务内容 2.1  新浪网络服务的具体内容由新浪根据实际情况提供，例如博客、播客、在线音乐、搜索、手机图片铃声下载、交友、论坛(BBS)、聊天室、电子邮件、发表新闻评论等。 2.2  新浪提供的部分网络服务（例如手机图片铃声下载、电子邮件等）为收费的网络服务，用户使用收费网络服务需要向新浪支付一定的费用。对于收费的网络服务，新浪会在用户使用之前给予用户明确的提示，只有用户根据提示确认其愿意支付相关费用，用户才能使用该等收费网络服务。如用户拒绝支付相关费用，则新浪有权不向用户提供该等收费网络服务。 2.3  用户理解，新浪仅提供相关的网络服务，除此之外与相关网络服务有关的设备（如个人电脑、手机、及其他与接入互联网或移动网有关的装置）及所需的费用（如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费）均应由用户自行负担。   3. 服务变更、中断或终止 3.1  鉴于网络服务的特殊性，用户同意新浪有权随时变更、中断或终止部分或全部的网络服务（包括收费网络服务）。如变更、中断或终止的网络服务属于免费网络服务，新浪无需通知用户，也无需对任何用户或任何第三方承担任何责任；如变更、中断或终止的网络服务属于收费网络服务，新浪应当在变更、中断或终止之前事先通知用户，并应向受影响的用户提供等值的替代性的收费网络服务，如用户不愿意接受替代性的收费网络服务，就该用
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-left">
+                        <div class="checkbox i-checks">
+                            <label class="padding">
+                                <input type="checkbox"><i></i> 我同意注册协议</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary block full-width m-b">注 册</button>
+
+                    <p class="text-muted text-center"><small>已经有账户了？</small><a href="login.html">点此登录</a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+            <!--主体部分，登陆-结束-->
+
+            <footer>
+                <div class="footer ">
+                    <div class="row">
+                        <div class="col-md-5">数据连接列表：<br>测试</div>
+                    </div>
+                    <div class="pull-right">
+                        By：<a href="#" target="_blank">陈义</a>
+                    </div>
+                    <div>
+                        <strong>Copyright</strong> C+ &copy; 2016
+                    </div>
+                </div>
+            </footer>
+</div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>          <!--创建手风琴效果的可折叠菜单-->
+<!--   <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>   <!--一个支持把内容放在一个盒子里面，固定一个高度，超出的则使用滚动-->
+
+<!-- Custom and plugin javascript -->
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/main.js"></script>
+
+<script src="js/user-check.js"></script>
+
+</body>

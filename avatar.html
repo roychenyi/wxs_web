@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>头像设置</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="js/plugins/cropper/cropper.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-4">
+        <div class="ibox">
+            <div class="ibox-content">
+                <ul class="nav nav-pills nav-stacked ">
+                    <li ><a href="$link.getContextURL()/$user.nickname/set/index">基本信息</a></li>
+                    <li ><a href="$link.getContextURL()/$user.nickname/set/site">空间设置</a></li>
+                    <li class="active"><a href="$link.getContextURL()/$user.nickname/set/avatar">用户头像</a></li>
+                    <li ><a href="$link.getContextURL()/$user.nickname/set/privacy">隐私设置</a></li>
+                    <li class="hidden"><a>消息设置</a></li>
+                    <li class="hidden"><a>偏好设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+<div class="ibox">
+    <div class="ibox-title">头像设置</div>
+<div class="ibox-content">
+    <form class="avatar-form" id="avatar_form" action="$link.getContextURL()/$author.nickname/image/updateuserlogo" enctype="multipart/form-data" method="post">
+        <div class="modal-body">
+            <div class="avatar-body">
+
+                <!-- Upload image and data -->
+                <div class="avatar-upload">
+                    <input class="avatar-src" name="avatar_src" type="hidden"/>
+                    <input class="avatar-data" name="avatar_data" type="hidden"/>
+                    <label for="avatarInput">头像上传</label>
+                    <input class="avatar-input " id="avatarInput" name="avatar_file" type="file" accept="image/*"/>
+                </div>
+
+                <!-- Crop and preview -->
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="avatar-wrapper">
+                            <img id="image" src="images/head_face.jpeg" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <!--<div class="avatar-preview preview-lg"></div>-->
+
+                        <div class="avatar-preview preview-md"></div>
+                        <label>100*100</label>
+
+                        <div class="avatar-preview preview-sm"></div>
+                        <label>50*50</label>
+
+                        <div class="avatar-preview preview-xs"></div>
+                        <label>30*30</label>
+                        <div class="input-group input-group-sm">
+                            <label class="input-group-addon" for="dataX">X</label>
+                            <input type="text" class="form-control" id="dataX" name="x" placeholder="x"   readonly="readonly">
+                            <span class="input-group-addon">px</span>
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <label class="input-group-addon" for="dataY">Y</label>
+                            <input type="text" class="form-control" id="dataY" name="y" placeholder="y" readonly="readonly">
+                            <span class="input-group-addon">px</span>
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <label class="input-group-addon" for="dataWidth">Width</label>
+                            <input type="text" class="form-control" id="dataWidth" name="width" placeholder="width" readonly="readonly">
+                            <span class="input-group-addon">px</span>
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <label class="input-group-addon" for="dataHeight">Height</label>
+                            <input type="text" class="form-control" id="dataHeight" name="height" placeholder="height" readonly="readonly">
+                            <span class="input-group-addon">px</span>
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <label class="input-group-addon" for="dataRotate">Rotate</label>
+                            <input type="text" class="form-control" id="dataRotate" name="degree" placeholder="degree" readonly="readonly">
+                            <span class="input-group-addon">deg</span>
+                        </div>
+                               <div class="input-group input-group-sm hidden">
+                                    <label class="input-group-addon" for="dataScaleX">ScaleX</label>
+                                    <input type="text" class="form-control" id="dataScaleX" placeholder="scaleX">
+                                </div>
+                                <div class="input-group input-group-sm hidden">
+                                    <label class="input-group-addon" for="dataScaleY">ScaleY</label>
+                                    <input type="text" class="form-control" id="dataScaleY" placeholder="scaleY">
+                                </div>
+
+                    </div>
+                </div>
+
+                <div class="row avatar-btns ">
+                    <div class="col-md-9 docs-buttons">
+                        <div class="btn-group">
+                            <button class="btn btn-primary" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees">向左旋转</button>
+                            <button class="btn btn-primary" data-method="rotate" data-option="-15" type="button">-15deg</button>
+                            <button class="btn btn-primary" data-method="rotate" data-option="-30" type="button">-30deg</button>
+                            <button class="btn btn-primary" data-method="rotate" data-option="-45" type="button">-45deg</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees">向右旋转</button>
+                            <button class="btn btn-primary" data-method="rotate" data-option="15" type="button">15deg</button>
+                            <button class="btn btn-primary" data-method="rotate" data-option="30" type="button">30deg</button>
+                            <button class="btn btn-primary" data-method="rotate" data-option="45" type="button">45deg</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-block avatar-save" id="upload" type="button">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+</div>
+        <div class="ibox">
+            <div class="ibox-title">隐私设置</div>
+            <div class="ibox-content">
+                <form role="form" class="form-horizontal" action="">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">是否允许日志评论</label>
+                        <div class="col-sm-8">
+                            <label class="checkbox-inline">
+                                <input type="radio" name="reply_rodio" id="reply_yes" value="1" > 是
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="reply_rodio" id="reply_no" value="0"> 否
+                            </label>
+                            <input type="hidden" name="content_reply" id="content_reply" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">是否关闭空间</label>
+                        <div class="col-sm-8">
+                            <label class="checkbox-inline">
+                                <input type="radio" name="on|off_rodio" id="on" value="1" > 是
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="on|off_rodio" id="off" value="0"> 否
+                            </label>
+                            <input type="hidden" name="on|off" id="on|off" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-5 col-sm-offset-3">
+                            <button type="submit" class="btn btn-info"><i class="fa fa-spinner fa-spin"></i>确定</button>&nbsp;&nbsp;
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>          <!--创建手风琴效果的可折叠菜单-->
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>   <!--一个支持把内容放在一个盒子里面，固定一个高度，超出的则使用滚动-->
+
+<!-- Custom and plugin javascript -->
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/plugins/cropper/cropper.js"></script>
+<script src="js/cropper-tool1.js"></script>
+</body>
+</html>

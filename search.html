@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>导航栏</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body >
+<div >
+    <header style="position:relative;top:0px;">
+        <div class="navbar">
+            <div class="navbar navbar-inverse">
+
+                <!-- 	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                    </button>
+                    -->
+                <a class="navbar-brand" href="#">文学社网站</a>
+                <a id="search-xs"  href="#" class="navbar-brand pull-right visible-xs">
+                    <span class="glyphicon glyphicon-search"></span></a>
+                <script type="text/javascript">
+                    $("#search-xs").click(function(){
+                        $("#search-xs").add('<form action=\"\" role=\"form\"><input type=\"text\" class=\"input\" placeholder=\"search\"/></form>');
+                        $("#search-xs").add('12345');
+                        <!--v	this.innerHTML("12345");-->
+                        $("#search-xs").css({display:'none'});
+                    });
+
+
+                </script>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#">首页</a></li>
+                        <li><a href="#about">文字</a></li>
+                        <li><a href="#contact">社团</a></li>
+                        <!--      <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">帮助 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">企业</a></li>
+                                  <li><a href="#">商户</a></li>
+                                  <li><a href="#">服务网站</a></li>
+                                  <li class="divider"></li>
+                                  <li class="nav-header">灰掉</li>
+                                  <li><a href="#">分割线1</a></li>
+                                  <li><a href="#">分割线2</a></li>
+                                </ul>
+
+                              </li>-->
+                        <li class="pull-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        <li class="pull-right"><a>登陆|注册</a></li>
+                        <li class="pull-right"><a><form action="" role="form"><input type="text" class="input" placeholder="search"/>
+                            <button type="submit" class=""><span class="glyphicon glyphicon-search"></span></button>
+                        </form></a></li>
+
+
+                    </ul>
+                </div>
+ </div>
+            </div>
+
+
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-6 hidden-xs" style="height:10000px;">登陆展示图片 </div>
+            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                <form class="form-horizontal" role="form">
+                    <div class="hero-unit">
+                    <h3>账号登陆</h3>
+                    <div class="form-group">
+                        <label for="username" class="col-sm-3 col-xs-3 control-label text-right">账户</label>
+                        <div class="col-sm-9 col-xs-9">
+                            <input type="text" class="form-control" id="username"  name="username"
+                                   placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 col-xs-3 control-label text-right">密码</label>
+                        <div class="col-sm-9 col-xs-9">
+                            <input type="text" class="form-control" id="password" name="password"
+                                   placeholder="请输入密码">
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <label for="verifyCode" class="col-lg-3  col-sm-3 col-xs-3 control-label text-right">验证码</label>
+                            <div class="col-lg-4 col-sm-4 col-xs-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="verifyCode" name="verifyCode"
+                                           placeholder="验证码"  onblur="checkVerifyCode(this.value,this.id);" onfocus="inputVerifyCode('img_result');"  />
+                                    <span id="result" class="input-group-addon" style="display:none;"><img id="img_result" class="img_result"   src=""/>	</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                <img id="CreateCheckCode" alt="验证码" src="servlet/verify.img" onclick="this.src=this.src+'?'"/>
+                                <a href="javascript:document.getElementById('CreateCheckCode').onclick()" >换一张</a>
+                            </div>
+                        </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8 col-xs-offset-3 col-xs-9 col-lg-offset-6 col-lg-6">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 请记住我
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-6 col-sm-10 col-xs-offset-3 col-xs-9 col-lg-offset-6 col-lg-6">
+                            <button type="submit" class="btn btn-primary btn-lg">登录</button>
+                        </div>
+                    </div>
+</div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>

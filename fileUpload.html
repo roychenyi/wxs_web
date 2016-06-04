@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>文件上传</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/fileinput/fileinput.css" rel="stylesheet">
+
+</head>
+<body class="top-navigation gray-bg" >
+
+
+<!-- 导航栏 -->
+<header>
+    <div class="row border-bottom white-bg">
+        <nav class="navbar  " role="navigation">
+            <div class="navbar-header">
+                <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                    <i class="fa fa-reorder"></i>
+                </button>
+                <button aria-controls="navbar" aria-expanded="false" data-target="#navbar1" data-toggle="collapse" class="navbar-toggle collapsed" type="button" id="user">
+                    <i class="fa fa-user"></i>
+                </button>
+
+                <button  aria-controls="navbar" aria-expanded="false" data-target="#search" data-toggle="collapse" class="navbar-toggle collapsed" type="button" id="top-search">
+                    <i class="fa fa-search"></i>
+                </button>
+                <a href="index_4.html#" class="navbar-brand">文学社网站</a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a aria-expanded="false" role="button" href="#"><i class="fa fa-home"></i> 首页</a>
+                    </li>
+                    <li >
+                        <a aria-expanded="false" rele="button" href="#"><i class="fa fa-inbox"></i>社团</a>
+                    </li>
+                    <li>
+                        <a aria-expanded="false" rele="button" href="#"><i class="fa fa-edit"></i>文字</a>
+                    </li>
+
+                </ul>
+
+                <ul class="nav navbar-top-links navbar-right">
+
+
+                    <li ><a>登陆</a></li>
+                    <li><a>注册</a></li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <a aria-expanded="false" role="button" href="index_4.html#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user">用户</i> <span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="index_4.html">菜单列表</a>
+                            </li>
+                            <li><a href="index_4.html">菜单列表</a>
+                            </li>
+                            <li><a href="index_4.html">菜单列表</a>
+                            </li>
+                            <li><a href="index_4.html">菜单列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <i class="fa fa-sign-out"></i> 退出
+                        </a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right hidden-xs" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="button" class="btn btn-sm btn-primary">搜索</button>
+
+                    </div>
+
+                </form>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--主体部分-->
+
+<!--主体部分，登陆-->
+<div class="container">
+<a id="showlayer" href="#">显示上传界面</a>
+    <!--<form><div class="form-group"><input type="file" class="file" id="file1" /></div> </form>-->
+<!--</div>-->
+<!--<input type='file' id='file'/>-->
+<!--<img id="img1" src=""/>-->
+<!--<input type="file" id="file2" />-->
+<!--主体部分，登陆-结束-->
+<div class="ibox">
+    <div class="ibox-content">
+        <div class="panel blank-panel">
+
+            <div class="panel-heading no-padding">
+                <div class="panel-options no-margins text-center">
+
+                    <ul class="nav nav-tabs ">
+                        <li class="active"><a data-toggle="tab" href="#upload">本地上传</a>
+                        </li>
+                        <li class=""><a data-toggle="tab" href="#album">我的相册</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="tab-content">
+                    <div id="upload" class="tab-pane active">
+
+                    </div>
+                    <div id="album" class="tab-pane">
+                        测试
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer ">
+        <div class="row">
+            <div class="col-md-5">数据连接列表：<br>测试</div>
+        </div>
+        <div class="pull-right">
+            By：<a href="#" target="_blank">陈义</a>
+        </div>
+        <div>
+            <strong>Copyright</strong> C+ &copy; 2016
+        </div>
+    </div>
+</footer>
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>          <!--创建手风琴效果的可折叠菜单-->
+<!--   <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>   <!--一个支持把内容放在一个盒子里面，固定一个高度，超出的则使用滚动-->
+
+<!-- Custom and plugin javascript -->
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/main.js"></script>
+
+<!--javascrpt-plugins-layer-->
+<script src="js/plugins/layer/layer.js?test"></script>
+<!--<script>-->
+    <!--layer.use('js/plugins/layer/extend/layer.ext.js'); //载入layer拓展模块-->
+<!--</script>-->
+
+<!--<script src="js/user-check.js"></script>-->
+<script src="js/plugins/fileinput/fileinput.min.js"></script>
+<script src="js/plugins/fileinput/fileinput_locale_zh.js"></script>
+<script>
+
+
+
+                $("#file").change(function(e){
+                    var file = e.target.files||e.dataTransfer.files;
+                    if(file){
+                        $('#img').src=this.result;
+//                        var reader = new FileReader();
+//                        reader.onload=function(){
+//                            $("<img src='"+this.result+"'/>").appendTo(this);
+//
+//                        }
+//
+//                        reader.readAsDataURL(file);
+                    }
+                });
+
+
+   $("#showlayer").click(function(){
+       //自定页
+       layer.open({
+           type: 2,
+           maxmin:true,
+           area: ['50%', '90%'],
+           maxWidth:1000,
+           skin: 'layui-layer-demo', //样式类名
+           title:'页面',
+           closeBtn: 0, //不显示关闭按钮
+           shift: 2,
+           shadeClose: true, //开启遮罩关闭
+//           content: '<form><div class=\"form-group\"><input type=\"file\" class=\"file\" id=\"file1\" /></div> </form>'
+           content:'image.html'
+       });
+   });
+    $("#file1").fileinput({
+        language: 'zh', //设置语言
+        uploadUrl: '#', // you must set a valid URL here else you will get an error
+        allowedFileExtensions : ['jpg', 'png','gif'],
+        overwriteInitial: false,
+ //       showCaption:true,//是否显示文件的标题。默认值true。
+    showPreview:true,//是否显示文件的预览图。默认值true。
+    showRemove:false,//是否显示删除/清空按钮。默认值true。
+ //   showUpload:true,//是否显示文件上传按钮。默认是submit按钮，除非指定了uploadUrl属性。默认值true。
+    showCancel:true,//是否显示取消文件上传按钮。只有在AJAX上传线程中该属性才可见可用。默认值true。
+    captionClass:"",//在标题容器上额外的class。类型string。
+    previewClass:"",//在预览区域容器上的额外的class。类型string。
+    mainClass:"",//添加在文件上传主容器。类型string。
+
+        initialPreviewShowDelete:true,
+//    initialDelimiter:'*$$*',//在initialPreview属性中用于上传多个文件时的分隔符。默认值：'*$$*'。
+//    initialPreview:"",//类型string或array。显示的初始化预览内容。你可以传入一个简单的HTML标签用于显示图片、文本或文件。如果设置一个字符串，会在初始化预览图中显示一个文件。你可以在initialDelimiter属性中设置分隔符用于显示多个预览图。如果设置为数组，初始化预览图中会显示数组中所有的文件
+        maxFileSize: 1000,
+        maxFilesNum: 1,
+        showUpload: true, //是否显示上传按钮
+        showCaption: true,//是否显示标题
+        browseClass: "btn btn-primary", //按钮样式
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+        //allowedFileTypes: ['image', 'video', 'flash'],
+        slugCallback: function(filename) {
+            return filename.replace('(', '_').replace(']', '_');
+        }
+    });
+           $('#file2').each(function() {
+                    var imageurl = $(this).attr("value");
+                    if (imageurl) {
+                        $(this).fileinput({
+                            showUpload : false,
+                            language : 'zh',
+                            allowedFileTypes : [ 'image' ],
+                            allowedFileExtensions : [ 'jpg', 'png', 'gif' ],
+                            maxFileSize : 2000,
+                            initialPreview : [// 预览图片的设置
+                             "<img src='" + imageurl + "' class='file-preview-image' style='width:500px'>" ]
+                        });
+                    } else {
+                        $(this).fileinput({
+                            showUpload : false,
+                            language : 'zh',
+                            allowedFileTypes : [ 'image' ],
+                            allowedFileExtensions : [ 'jpg', 'png', 'gif' ],
+                            maxFileSize : 2000
+                        });
+                    }
+
+                });
+</script>
+
+</body>

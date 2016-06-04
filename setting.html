@@ -1,0 +1,187 @@
+w<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>
+        用户设置界面
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="row">
+    <div class="col-md-4">
+        <div class="ibox">
+            <div class="ibox-content">
+                <ul class="nav nav-pills nav-stacked ">
+                    <li class="active"><a>基本信息</a></li>
+                    <li ><a>空间设置</a></li>
+                    <li ><a>用户头像</a></li>
+                    <li><a>隐私设置</a></li>
+                    <li class="hidden"><a>消息设置</a></li>
+                    <li class="hidden"><a>偏好设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="panel-body">
+            <div class="panel-group" id="version">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title text-center">
+                            <a data-toggle="collapse" data-parent="#version" ><apan class="pull-left">用户名</apan>名字<code class="pull-right">修改密码</code></a>
+                        </h5>
+                    </div>
+
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title text-center">
+                            <a data-toggle="collapse" data-parent="#version" ><apan class="pull-left">昵称</apan>nickname<code class="pull-right"></code></a>
+                        </h5>
+                    </div>
+
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                            <h5 class="panel-title text-center">
+                                <a data-toggle="collapse" data-parent="#version" href="#info"><apan class="pull-left">个人资料</apan>完善资料，让大家更了解你<code class="pull-right">编辑</code></a>
+                            </h5>
+                        </div>
+                            <div id="info" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                            <form role="form" class="form-horizontal" action="">
+                                <h4 class="text-info">基本信息</h4>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">性别</label>
+                                    <div class="col-sm-9">
+                                        <label class="checkbox-inline">
+                                            <input type="radio" name="sex_rodio" id="boy" value="option1" > 男
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="radio" name="sex_rodio" id="girl" value="option2"> 女
+                                        </label>
+                                        <input type="hidden" name="sex" id="sex" value="0">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">生日</label>
+                                    <div class="col-sm-9">
+                                        <label class="checkbox-inline">
+                                            <select node-type="birthday_year" name="birthday_y" id="birthday_y">
+                                                <option value=""></option>
+
+                                            </select><span>年</span>
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <select node-type="birthday_month" name="birthday_m" id="birthday_m">
+                                                <option value=""></option>
+
+                                            </select><span>月</span>
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <select node-type="birthday_month" name="birthday_d" id="birthday_d">
+                                                <option value=""></option>
+
+                                            </select><span>日</span>
+                                        </label>
+                                        <input type="hidden" name="birth" id="birth" value="2016/2/12">
+                                        <label class='checkbox-inline text-warning hidden' id="birth_error_info"><i class='fa fa-warning'>请输入完整生日</i></label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">血型</label>
+                                    <div class="col-sm-9">
+                                        <label class="checkbox-inline">
+                                            <select  id="blood_select">
+                                                <option value="" selected></option>
+                                                <option value="A" >A型</option>
+                                                <option value="B" >B型</option>
+                                                <option value="0" >O型</option>
+                                                <option value="AB" >AB型</option>
+                                            </select>
+                                            <input type="hidden" name="blood" id="blood" value="">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label ">QQ</label>
+                                    <div class="col-sm-9">
+                                        <div class="checkbox-inline">
+
+                                            <input type="text" name="qq" class="form-control" placeholder="请输入您的QQ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group hidden">
+                                    <label class="col-sm-3 control-label">所在地</label>
+                                    <div class="col-sm-9">
+                                        <label class="checkbox-inline">
+                                            <select name="province" id="province">
+                                                <option value="" selected></option>
+                                                <option value="A" >A型</option>
+                                                <option value="AB" >AB型</option>
+                                                <option value="AB" >AB型</option>
+                                                <option value="AB" >AB型</option>
+                                                <option value="AB" >AB型</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label ">个人简介</label>
+                                    <div class="col-sm-9">
+                                        <div class="checkbox-inline">
+
+                                            <textarea name="sign" id="sign" cols="25" rows="3"   class="form-control" >
+                                                </textarea>
+                                            <label class='checkbox-inline text-warning hidden' id="sign_error_info"><i class='fa fa-warning'>您输入的数字超过了36个字，请重新输入</i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-5 col-sm-offset-3">
+                                        <button type="submit" class="btn btn-info"><i class="fa fa-spinner fa-spin"></i>确定</button>&nbsp;&nbsp;
+                                        <button type="reset" class="btn btn-info">取消</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title text-center">
+                            <a data-toggle="collapse" data-parent="#version" href="#tag"><apan class="pull-left">个人标签</apan>标签<code class="pull-right">编辑</code></a>
+                        </h5>
+                    </div>
+                    <div id="tag" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <form>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>          <!--创建手风琴效果的可折叠菜单-->
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>   <!--一个支持把内容放在一个盒子里面，固定一个高度，超出的则使用滚动-->
+
+<!-- Custom and plugin javascript -->
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/setting.js"></script>
+</body>
+</html>

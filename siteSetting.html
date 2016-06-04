@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>空间设置</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="row">
+    <div class="col-md-4">
+        <div class="ibox">
+            <div class="ibox-content">
+                <ul class="nav nav-pills nav-stacked ">
+                    <li ><a>基本信息</a></li>
+                    <li class="active"><a>空间设置</a></li>
+                    <li ><a>用户头像</a></li>
+                    <li><a>隐私设置</a></li>
+                    <li class="hidden"><a>消息设置</a></li>
+                    <li class="hidden"><a>偏好设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="panel-body">
+            <div class="panel-group" id="version">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title text-center">
+                            <a data-toggle="collapse" data-parent="#version" href="#title" ><apan class="pull-left">空间标题</apan>标题<code class="pull-right">编辑</code></a>
+                        </h5>
+                    </div>
+                    <div id="title" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <form class="form-horizontal" id="title_form" action="">
+                                <h5>您个人空间的标题，最长不得超过10个字</h5>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">标题</label>
+                                    <div class="col-sm-9">
+                                        <div class="checkbox-inline">
+
+                                            <input type="text" name="title" class="form-control" placeholder="请输入标题，长度10">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-5 col-sm-offset-3">
+                                        <button type="button" class="btn btn-info"><i class="fa fa-spinner fa-spin"></i>确定</button>&nbsp;&nbsp;
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title text-center">
+                            <a data-toggle="collapse" data-parent="#version" href="#pull" ><apan class="pull-left">文章状态</apan><span>是否可投递</span><code class="pull-right">编辑</code></a>
+                        </h5>
+                    </div>
+                    <div id="pull" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <form class="form-horizontal" id="pull_form" action="">
+                                <h5>系统默认您的文章为可投递状态(即您可以投递你的文章到文学社或平台首页)，您可以通过下面的选择进行修改</h5>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">投递状态</label>
+                                    <div class="col-sm-9">
+                                        <label class="checkbox-inline">
+                                            <input type="radio" name="pull_rodio" id="pull_yes" value="1" checked="checked"> 是
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="radio" name="pull_rodio" id="pull_no" value="0"> 否
+                                        </label>
+                                        <input type="hidden" name="configId" value="">
+                                        <input type="hidden" name="pull_status" id="pull_status" value="0">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-5 col-sm-offset-3">
+                                        <button type="button" class="btn btn-info"><i class="fa fa-spinner fa-spin"></i>确定</button>&nbsp;&nbsp;
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title text-center">
+                            <a data-toggle="collapse" data-parent="#version" href="#catalog"><apan class="pull-left">文章分类</apan>目录<code class="pull-right">编辑</code></a>
+                        </h5>
+                    </div>
+                    <div id="catalog" class="panel-collapse collapse in">
+                            <div class="panel-body">
+
+                                <h4 class="text-info">文章目录管理</h4>
+                               <ul class="list-group">
+                                   <li class="list-group-item" id="1">个人日记(此分类不支持编辑及删除)</li>
+                                   <li class="list-group-item" id="2">私密日记（此分类不支持编辑及删除）</li>
+                                   <li class="list-group-item" id="3">
+                                    <form  class="form-horizontal hidden" action="" ><div class='form-group'><div class='col-sm-5'><input type='text' class='form-control' value="众说纷纭"></div> <input type="button" name='sure' class='btn btn-info' value="确定" /> &nbsp;&nbsp;<input type="button" name='reset' class='btn btn-info' value="取消"/></div></form>
+
+                                    <div class=""><span>众说纷纭</span><a class="pull-right" title="delete" href="javascript:;"  >删除</a>&nbsp;&nbsp;<a class="pull-right" href="javascript:;"  title="edite" >编辑</a>
+                                    </div>
+                                   </li>
+                                   <li class="list-group-item " id="4">
+                                       <form  class="form-horizontal hidden" action="" >
+                                           <div class='form-group'>
+                                               <div class='col-sm-5'>
+                                                   <input type='text' data-url="" class='form-control' value="众说纷纭2">
+                                               </div>
+                                               <input type="button" name='sure' class='btn btn-info' value="确定" />
+                                               &nbsp;&nbsp;<input type="button" name='reset' class='btn btn-info' value="取消"/>
+                                           </div>
+                                       </form>
+
+                                       <div><span>众说纷纭2</span><a class="pull-right" title="delete" href="javascript:;"  >删除</a>&nbsp;&nbsp;<a class="pull-right" href="javascript:;"  title="edite" >编辑</a>
+                                       </div>
+                                   </li>
+                                   <li class="list-group-item hidden" id="catalog_new" >
+                                       <form  class="form-horizontal" action="" ><div class='form-group'><div class='col-sm-5'><input type='text' class='form-control' value=""></div> <input type="submit" name='sure' class='btn btn-info' value="确定" /> &nbsp;&nbsp;<input type="button" name='reset' class='btn btn-info' value="取消"/></div></form>
+                                   </li>
+                               </ul>
+                                <a id="catalog_add" class="text-danger" href="javascript:;">添加分类</a>
+                                <p><p>
+                               <div ><p>温馨提示:<br>
+                              点击分类名称或编辑按钮可修改日志分类名称，点击保存按钮即可生效。<br>
+                               请您注意，分类名称长度不超过12个英文字母或6个汉字长度。<br>
+                               若删除日志分类，则该分类下的所有日志将自动迁移到“个人日记”分类下。</p>
+                               </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>          <!--创建手风琴效果的可折叠菜单-->
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>   <!--一个支持把内容放在一个盒子里面，固定一个高度，超出的则使用滚动-->
+
+<!-- Custom and plugin javascript -->
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/plugins/layer/layer.js"></script>
+<script src="js/setting.js"></script>
+</body>
+</html>
