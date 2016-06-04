@@ -144,7 +144,15 @@
                             <div class="ibox-content">
                                 <!--<p><img id="user-face"  src="images/head_face1.jpg" style="width:170px;height: 170px;"></p>-->
                                 <h1 class="text-center">用户名</h1>
-                                <p class="text-center"><a class="btn btn-success">关注</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-success">消息</a></p>
+                                <p class="text-center"><a class="btn btn-success">关注</a>
+                             <span class="pull-right dropdown" name="dropdown">&nbsp;
+							<a class="dropdown-toggle active" href="#rootUrl()/$author.nickname/article/article_edite/$diary.diaryId" data-toggle="data-toggle">已关注<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li id="d_modify" name="d_modify"><a href="#rootUrl()/$author.nickname/article/article_edite/$diary.diaryId">取消关注</a></li>
+                                            <li id='d_toCommen' name='d_toCommen'><a data-url='#rootUrl()/$author.nickname/article/tocommen/$diary.diaryId' href='javascript:;' >分组管理</a></li>
+
+                                        </ul></span>
+                                    &nbsp;&nbsp;&nbsp;<a class="btn btn-success">消息</a></p>
                                 <div id="data">
                                     <p>性别</p>
                                     <p>等级：</p>
