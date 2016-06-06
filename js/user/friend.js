@@ -61,7 +61,7 @@ var friend={
         ajax(url,data,friend.list_result);
     },
     list_result:function(data){
-        
+
     },
     //获取好友分组
     group:function(url){

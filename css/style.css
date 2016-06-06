@@ -1,7 +1,7 @@
 /*@import url("http://fonts.useso.com/css?family=Open+Sans:300,400,600,700&amp;lang=en");*/
 /*
  *
- *   H+ - Admin Theme
+ *   cx.wxs - chenyi
  *   version 2.2.0
  *
 */
@@ -6670,7 +6670,7 @@ body.skin-3 {
 .index-page-text{
     font-size: 18px;
 }
-.slogan h2,h3,h4{
+.slogan h2,.slogan h3,.slogan h4{
     color: #FFF;
     text-shadow: none;
 
